@@ -30,9 +30,8 @@ def main(message, history):
     )
     chain = RetrievalChain.get_chain(retriever)
     result = chain.invoke({"input": message})
-    print(result)
 
-    return result['answer']
+    return result
 
 
 def launch_gradio():
